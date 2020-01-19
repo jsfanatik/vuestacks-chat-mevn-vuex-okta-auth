@@ -4,7 +4,7 @@
       <div class="card-content">
         <div>
           <ul class="messages" v-chat-scroll>
-            <li class="chat-message" v-for="message in messages" :key="message.id">
+            <li class="chat-message" v-for="message in messages" :key="message._id">
               <div class="right-bubble" v-if="message.name === name">
                 <span class="green-text">{{ message.name }}&nbsp;</span>
                 <span class="grey-text text-darken-3">{{ message.content }}</span>
