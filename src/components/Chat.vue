@@ -5,12 +5,12 @@
         <div>
           <ul class="messages" v-chat-scroll>
             <li class="chat-message" v-for="message in messages" :key="message._id">
-              <div class="right-bubble" v-if="message.name === name">
+              <div class="right-bubble" v-if="message.name === activeUser.name">
                 <span class="green-text">{{ message.name }}&nbsp;</span>
                 <span class="grey-text text-darken-3">{{ message.content }}</span>
                 <span class="grey-text time">{{ message.timestamp }}</span>
               </div>
-              <div class="left-bubble right-align" v-if="message.name !== name">
+              <div class="left-bubble right-align" v-if="message.name !== activeUser.name">
                 <span class="green-text">{{ message.name }}&nbsp;</span>
                 <span class="grey-text text-darken-3">{{ message.content }}</span>
                 <span class="grey-text time">{{ message.timestamp }}</span>
